@@ -1,18 +1,30 @@
 import React from "react";
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 export default function Button(){
     const className = [props.className]
-    if(isPrimary) className.push("btn-primary")
-    if(isLarge) className.push("btn-lg")
-    if(isSmall) className.push("btn-sm")
-    if(isShadow) className.push("btn-shadow")
-    if(isBlock) className.push("btn-block")
+    if(props.isPrimary) className.push("btn-primary")
+    if(props.isLarge) className.push("btn-lg")
+    if(props.isSmall) className.push("btn-sm")
+    if(props.isShadow) className.push("btn-shadow")
+    if(props.isBlock) className.push("btn-block")
 
     const onClick = () => {
         if(props.onClick) props.onClick()
     };
+
+    if (isDisabled || isLoading) {
+        if(isDisabled) {
+            return (isDisabled ? className.isDisabled : undefined )
+        }
+        else {
+           if(isLoading) {
+             return (isDisabled ? <span>tnuggu ya</span> : undefined )
+           }
+        }
+    }
 
     if (props.type === "link") {
        if(props.isExternal) {
