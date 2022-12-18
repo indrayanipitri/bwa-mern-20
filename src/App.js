@@ -1,12 +1,14 @@
 import React from 'react';
-import './assets/scss/style.scss'
+import { Routes, Route } from 'react-router-dom';
+import './assets/scss/style.scss';
+import LandingPage from 'pages/LandingPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>hai pipit</h2>
-      </header>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
     </div>
   );
 }
