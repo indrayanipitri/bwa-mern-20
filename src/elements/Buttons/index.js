@@ -1,9 +1,8 @@
 import React from "react";
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 
-export default function Button(){
+export default function Button(props){
     const className = [props.className]
     if(props.isPrimary) className.push("btn-primary")
     if(props.isLarge) className.push("btn-lg")
@@ -15,15 +14,19 @@ export default function Button(){
         if(props.onClick) props.onClick()
     };
 
-    if (isDisabled || isLoading) {
-        if(isDisabled) {
-            return (isDisabled ? className.isDisabled : undefined )
-        }
-        else {
-           if(isLoading) {
-             return (isDisabled ? <span>tnuggu ya</span> : undefined )
-           }
-        }
+    if (props.isDisabled || props.isLoading) {
+        if(props.isDisabled) className.push("disabled")
+        return (
+            <span className={className.join(" ")} style={props.style}>
+                {props.isLoading ? (
+                <>
+                    <span className="spinner-border spinner-border-sm mx-5"></span>
+                    <span className="sr-only">Loading. . .</span>
+                </> )
+                : (props.children)
+                } 
+            </span>
+        )
     }
 
     if (props.type === "link") {
