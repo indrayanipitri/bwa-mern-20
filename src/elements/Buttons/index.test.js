@@ -23,7 +23,7 @@ test("harusnya ngerender si <tag a> / link eksternal", () => {
 })
 
 test("harusnya ngerender <Link> / link internal", () => {
-    const { container } = render(<Router><Button type="link"></Button></Router>)
+    const { container } = render(<Router><Button type="link" href=""></Button></Router>)
 
     expect(container.querySelector("a")).toBeInTheDocument();
 })
