@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+
+
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -64,6 +66,11 @@ header {
 
         .navbar-nav {
             li.nav-item{
+                &.active {
+                    a.nav-link {
+                        color: $primary;
+                    }
+                }
                 a {
                     &.nav-link {
                         letter-spacing: 1px;
