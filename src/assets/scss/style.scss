@@ -90,7 +90,19 @@ header {
 }
 
 section {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+}
+
+.img-cover {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.img-contain {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }
 
 .card {
@@ -105,11 +117,10 @@ section {
         top: 0;
         right: 0;
         color: $white;
-        line-height: 38px;
+        min-height: 30px;
         border-radius: 0 15px;
-
         span {
-            font-weight: 30;
+            font-weight: 300;
         }
     }
 
@@ -129,6 +140,47 @@ section {
         }
         span{
             font-size: .875rem;
+        }
+    }
+
+    &.card-featured {
+        overflow: hidden;
+        cursor: pointer;
+        height: 100%;
+        border-radius: 15px;
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0; bottom: 0; left: 0; right: 0;
+            transform: scale(1.1);
+            transition: .5s transform ease-in-out;
+            z-index: 2;
+            @include gradient-y(rgba($black, 0), rgba($black, .51), 0%, 100%)
+        }
+
+        .img-wrapper {
+            z-index: 1;
+            margin: 0;
+            top: 0; 
+            bottom: 0; 
+            left: 0; 
+            right: 0;
+            transform: scale(1.1);
+            transition: 0.25s transform ease-in-out;
+        }
+
+        .meta-wrapper {
+            z-index: 4;
+            color: $white;
+            padding: 20px;
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 100%;
+            transform: translateY(0);
+            transition: .3s transform ease-in-out;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
         }
     }
 }
