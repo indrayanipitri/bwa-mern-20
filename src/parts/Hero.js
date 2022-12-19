@@ -5,6 +5,7 @@ import IcTraveler from "assets/images/icons/ic_traveler.svg";
 import IcCities from "assets/images/icons/ic_cities.svg";
 import IcTreasure from "assets/images/icons/ic_treasure.svg";
 import Button from 'elements/Buttons'
+import formatNumber from "utils/formatNumber";
 
 export default function Hero(props) {
 
@@ -23,30 +24,30 @@ export default function Hero(props) {
                         Forget Busy Work <br />
                         Start Next Vacation
                     </h1>
-                    <p className="mb-4 font-weight-light text-gray-500 w-75" style={{ lineHeight: "170%" }}>
+                    <p className="mb-5 font-weight-light text-gray-500 w-75" style={{ lineHeight: "170%" }}>
                         we provide what you need to enjoy yout holiday with family. time to make another memorable moments
                     </p>
                     <Button className="btn px-5" hasShadow isPrimary onClick={showMostPicked}>
                         Show Me More
                     </Button>
 
-                    <div className="row" style={{ marginTop: 90 }}>
+                    <div className="row" style={{ marginTop: 80 }}>
                         <div className="col-auto" style={{ marginRight: 30 }}>
                             <img src={IcTraveler} alt={`${props.data.tavelers} Travelers`} width="36" height="36" />
                             <h6 className="mt-3">
-                                {props.data.travelers}{" "} <span className="font-wight-light text-gray-500" > travelers </span>
+                                {formatNumber(props.data.travelers)}{" "} <span className="font-wight-light text-gray-500" > travelers </span>
                             </h6>
                         </div>
                         <div className="col-auto" style={{ marginRight: 30 }}>
                             <img src={IcTreasure} alt={`${props.data.treasures} Treasures`} width="36" height="36" />
                             <h6 className="mt-3">
-                                {props.data.treasures}{" "} <span className="font-wight-light text-gray-500" > treasures </span>
+                                {formatNumber(props.data.treasures)}{" "} <span className="font-wight-light text-gray-500" > treasures </span>
                             </h6>
                         </div>
                         <div className="col-auto">
                             <img src={IcCities} alt={`${props.data.cities} Cities`} width="36" height="36" />
                             <h6 className="mt-3">
-                                {props.data.cities}{" "} <span className="font-wight-light text-gray-500" > cities </span>
+                                {formatNumber(props.data.cities)}{" "} <span className="font-wight-light text-gray-500" > cities </span>
                             </h6>
                         </div>
                     </div>
