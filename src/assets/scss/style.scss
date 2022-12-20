@@ -182,5 +182,17 @@ section {
             justify-content: flex-end;
             flex-direction: column;
         }
+
+        &:hover {
+            .meta-wrapper {
+                transform: translateY(-10px);
+            }
+            &:after {
+                transform: scale(1);
+            } 
+            .img-wrapper {
+                transform: scale(1);
+            }
+        }
     }
 }
