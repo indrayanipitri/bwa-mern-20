@@ -7,13 +7,13 @@ export default function Footer() {
        <footer>
             <div className="container">
                 <div className="row">
-                    <div className="col-auto column-brand" >
+                    <div className="col-auto  column-brand" >
                         <IconText />
                         <p className="brand-tagline">
                             We keboon your beaty holiday instantly and memorable
                         </p>
                     </div>
-                    <div className="col-auto col-md-2 mr-5">
+                    <div className="col-lg-2  col-md-2  col-sm-12 mr-5">
                         <h6 className="mt-2">
                             For Beinners
                         </h6>
@@ -36,7 +36,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     
-                    <div className="col-2 mr-5">
+                    <div className="col-lg-2 col-md-2 col-sm-12 mr-5">
                         <h6 className="mt-2">
                             Explore Us
                         </h6>
@@ -59,14 +59,14 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="col-3 col-md-2">
+                    <div className="col-lg-3 col-md-2 col-sm-12">
                         <h6 className="mt-2">
                             Connect Us
                         </h6>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
                                 <Button isExternal type="link" href="mailto:indrayanipitri@gmail.com">
-                                    indrayanipitri@gmail.com
+                                    indrayani
                                 </Button>
                             </li>
                             <li className="list-group-item">

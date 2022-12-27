@@ -13,12 +13,8 @@ export default function Header(props) {
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <BrandIcon />
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
                 
-                    <div className="collapse navbar-collapse " id="navbarTogglerDemo02">
+                    <div className="collapse navbar-collapse">
                         <ul className="navbar-nav ml-auto">
                             <li className={`nav-item${getNavLinkClass("/")}`}>
                                 <Button className="nav-link" type="link" href="/">
