@@ -89,27 +89,38 @@ header {
     }
 }
 
-.text-hero {
-    width: 530px;
-    height: auto;
+
+.hero {
+
+    .text-hero {
+        width: 530px;
+        height: auto;
+    }
+    
+    .text-hero p {
+        margin-bottom: 50px;
+        width: 75%;
+    }
+    
+    .text-hero-icon {
+        margin-top: 80px;
+    }
+    
+    .text-icon-hero-items {
+        margin-right: 10px;
+    }
+
+    .text-icon-hero-items img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .img-hero {
+        width: 430px;
+        height: 310px;
+    }
 }
 
-.text-hero p {
-    margin-bottom: 50px;
-}
-
-.text-hero-icon {
-    margin-top: 80px;
-}
-
-.text-icon-hero-items {
-    margin-right: 30px;
-}
-
-.img-hero {
-    width: 430px;
-    height: 310px;
-}
 
 
 
@@ -127,6 +138,10 @@ section {
     object-fit: contain;
     height: 100%;
     width: 100%;
+}
+
+.forMobile {
+    display: none;
 }
 
 .card {
@@ -264,37 +279,41 @@ footer {
 }
 
 @media only screen and (max-width: 1199px) {
-    .text-hero {
-        width: 50%;
-        height: auto;
-    }
 
-    .text-hero h1 {
-        font-size: 33px;
-        line-height: 45px;
-    }
-
-    .text-hero p {
-        margin-bottom: 30px;
-    }
-
-    .text-hero-icon {
-        margin-top: 50px;
+    .hero {
+        .text-hero {
+            width: 50%;
+            height: auto;
+        }
+    
+        .text-hero h1 {
+            font-size: 33px;
+            line-height: 45px;
+        }
+    
+        .text-hero p {
+            margin-bottom: 30px;
+        }
+    
+        .text-hero-icon {
+            margin-top: 50px;
+        }
+        
+        .text-icon-hero-items {
+            margin-right: 0px;
+        }
+        
+        .img-hero {
+            width: 50%;
+            height: 220px;
+        }
+    
+        .img-hero img {
+            width: 430px;
+        }
+    
     }
     
-    .text-icon-hero-items {
-        margin-right: 0px;
-    }
-    
-    .img-hero {
-        width: 50%;
-        height: 220px;
-    }
-
-    .img-hero img {
-        width: 430px;
-    }
-
     footer {
         .column-brand {
             width: 230px;
@@ -303,4 +322,121 @@ footer {
     }
 }
 
-@media only screen and (max-width: 992px) {}
+@media only screen and (max-width: 991px) {
+    .navbar {
+        justify-content: center;
+
+        .navbar-nav {
+            display: none;
+        }
+    }
+
+    .hero {
+
+        .text-hero h1 {
+            font-size: 28px;
+            line-height: 40px;
+        }
+
+        .text-icon-hero-items {
+            margin-right: 10px;
+        }
+    
+        .text-icon-hero-items img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .text-icon-hero-items span {
+            display: block;
+            padding-top: 10px;
+        }
+
+        .img-hero img {
+            width: 330px;
+        }
+        
+    }
+
+    .most-picked {
+        .meta-wrapper h5 {
+            font-size: 16px;
+        }
+
+        .meta-wrapper span {
+            font-size: 11px;
+        }
+    }
+    
+} 
+
+@media only screen and (max-width: 767px) {
+    .notMobile {
+        display: none;
+    }
+
+    .forMobile {
+        display: block;
+    }
+
+    header {
+        margin-bottom: 10px;
+    }
+    
+    .hero {
+        display: block;
+        text-align: center;
+
+        .text-hero {
+            width:  100%;
+        }
+        
+        .text-hero p {
+            width: 100%;
+        }
+
+        .text-icon-hero-items {
+            margin: auto;
+        }
+    
+       .img-hero {
+            display: none;
+       }
+        
+    }
+
+    section h4 {
+        font-size: 20px;
+    }
+
+    .most-picked {
+
+        .card-featured {
+            margin: 50px 0;
+            justify-content: center;
+        }
+
+        .img-wrapper {
+            height: 190px;
+        }
+
+        .meta-wrapper h5 {
+            font-size: 22px;
+        }
+
+        .meta-wrapper span {
+            font-size: 18px;
+        }
+    }
+
+    .category {
+        .card {
+            margin-top: 50px;
+        }
+
+        .meta-wrapper h5 {
+            font-size: 18px;
+        }
+    }
+}
+
