@@ -29,7 +29,6 @@ export default function Categories({ data }) {
                                     <span className="text-gray-500">
                                         {item.city}, {item.country}
                                     </span>
-                                    
                                 </div>
                             </div>
                         </div>
